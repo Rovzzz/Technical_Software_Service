@@ -1,0 +1,61 @@
+﻿<Page x:Class="Technical_Software_Service.Page_InfoTickets"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Technical_Software_Service"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Подробная информация о заявке">
+    <ScrollViewer>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Name="tbHeader" Text="Подробная информация о заявке" Style="{StaticResource Header}"/>
+
+        <StackPanel Grid.Row="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Name="tbTitle" FontSize="16px" FontFamily="Manrope" Margin="5"/>
+                <TextBlock Grid.Column="1" Name="tbDateOpen" FontSize="16px" FontFamily="Manrope" Margin="5"/>
+            </Grid>
+
+            <TextBlock Name="tbRequester" FontSize="16px" FontFamily="Manrope" Margin="0 10 0 10"/>
+                <TextBlock Text="Описание: " FontWeight="Bold" FontSize="16px" FontFamily="Manrope" Margin="0 10 0 10"/>
+            <TextBlock Name="tbDescription" FontSize="16px" FontFamily="Manrope" Margin="5"/>
+
+                <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Name="tbCategories" FontSize="16px" FontFamily="Manrope" Margin="5"/>
+                <TextBlock Grid.Column="1" Name="tbImportance" FontSize="16px" FontFamily="Manrope" Margin="5"/>
+                <TextBlock Grid.Column="2" Name="tbStates" FontSize="16px" FontFamily="Manrope" Margin="5"/>
+            </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Name="tbUsers" FontSize="16px" FontFamily="Manrope" Margin="0 10 0 0"/>
+                    <TextBlock Grid.Column="1" Name="tbDateUpdate" FontSize="16px" FontFamily="Manrope" Margin="0 10 0 0"/>
+                </Grid>
+                <TextBlock Name="tbSolution" FontSize="16px" FontFamily="Manrope" Margin="5" TextWrapping="Wrap"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Button Name="btnBack" Content="Вернуться" Style="{StaticResource Button}" Click="btnBack_Click"/>           
+        </StackPanel>
+    </Grid>
+    </ScrollViewer>
+</Page>
